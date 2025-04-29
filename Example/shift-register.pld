@@ -1,0 +1,36 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+Name      shift-register;
+PartNo    AtmelCPLD;
+Date      2/3/2024;
+Revision  01;
+Designer  Nathaniel R Lewis;
+Company   HooDooNet;
+Assembly  None;
+Location  Willits;
+Device    f1508plcc84;
+
+Pin 1 = !RST;
+Pin 2 = SCK;
+Pin 83 = LATCH;
+Pin 84 = IN;
+
+/* 64 bit internal register */
+PinNode = [SHIFT63..0];
+PinNode = [REGISTER63..0];
+
+/* 64 bit external pins */
+Pin [4..6, 8..12, 14..18, 20..25, 27..31, 33..37, 39..41, 44..46, 48..52, 54..58, 60..65, 67..71, 73..77, 79..81] = [OUT63..0];
+
+/* shifter */
+[SHIFT63..0].AR = RST;
+[SHIFT63..0].CK = SCK;
+[SHIFT63..0].D = [SHIFT62..0, IN];
+
+[REGISTER63..0].AR = RST;
+[REGISTER63..0].CK = LATCH;
+[REGISTER63..0].D = [SHIFT63..0];
+
+[OUT63..0] = ![REGISTER63..0];

@@ -1,0 +1,35 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
+Name      blink;
+PartNo    AtmelCPLD;
+Date      3/2/2022;
+Revision  01;
+Designer  Nathaniel R Lewis;
+Company   HooDooNet;
+Assembly  None;
+Location  Willits;
+Device    f1508plcc84;
+
+ORDER: RST, CLK, %1, COUNTER19..COUNTER0, %1, TOP_SYNC, %1, TOP_COMB, %1, LED;
+
+VECTORS:
+10 "00000" L L L
+1C "00000" L L L
+0C "00001" L L L
+0C "00002" L L L
+0C "00003" L L L
+0C "00004" L L L
+0C "00005" L L L
+0C "00006" L L L
+0C "00007" L L L
+0C "00008" L L L
+0C "00009" L L L
+0C "0000A" L L L
+0C "0000B" L L L
+0C "0000C" L L L
+0C "0000D" L L L
+0C "0000E" L L L
+0C "0000F" L L L
+0C "00010" L L L

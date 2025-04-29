@@ -4,6 +4,10 @@ A breakout board for the PLCC84 version of the ATF1504AS or ATF1508AS. Allows fo
 
 ![Assembled](/Assets/assembled.jpg)
 
+### Example Project
+
+See ![Example](/Example)
+
 ### Dual Voltage Rails
 
 The PLCC84 variants of the ATF1504AS and ATF1504AS provide two voltage rails - VCCINT and VCCIO. VCCINT is the CPLD core voltage and is required to be at 5V. VCCIO is the external IO voltage and can be either 3.3V (3.0V to 3.6V) or 5V.
